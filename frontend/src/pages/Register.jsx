@@ -173,10 +173,10 @@ const Register = () => {
     <div className="auth-container">
       <div className="glass-card register-card">
         <h2 style={{ textAlign: 'center', marginBottom: '0.25rem' }}>
-          Join <span className="gradient-text">AegisFlow</span>
+          Join <span className="gradient-text">CrimsonNet</span>
         </h2>
         <p className="subtitle" style={{ textAlign: 'center' }}>
-          Create an account to start managing & request blood inventories
+          Smart Blood Donation & Emergency Management System
         </p>
 
         {formError && (

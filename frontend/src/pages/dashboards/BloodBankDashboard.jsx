@@ -291,7 +291,7 @@ const BloodBankDashboard = () => {
       <nav className="dashboard-nav">
         <div className="nav-brand">
           <Activity size={24} color="#10b981" />
-          <h2>AegisFlow <span className="gradient-text">Blood Bank Hub</span></h2>
+          <h2>CrimsonNet <span className="gradient-text">Blood Bank Hub</span></h2>
         </div>
         <div className="nav-user">
           <div className="user-badge role-blood-bank">

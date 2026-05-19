@@ -153,7 +153,7 @@ const HospitalDashboard = () => {
       <nav className="dashboard-nav">
         <div className="nav-brand">
           <Building2 size={24} color="#6366f1" />
-          <h2>AegisFlow <span className="gradient-text">Hospital Portal</span></h2>
+          <h2>CrimsonNet <span className="gradient-text">Hospital Portal</span></h2>
         </div>
         <div className="nav-user">
           <div className="user-badge role-hospital">

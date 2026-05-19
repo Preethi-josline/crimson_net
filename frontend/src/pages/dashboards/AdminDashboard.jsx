@@ -43,7 +43,7 @@ const AdminDashboard = () => {
       <nav className="dashboard-nav">
         <div className="nav-brand">
           <GitPullRequest size={24} color="#f59e0b" />
-          <h2>AegisFlow <span className="gradient-text">Admin Panel</span></h2>
+          <h2>CrimsonNet <span className="gradient-text">Admin Panel</span></h2>
         </div>
         <div className="nav-user">
           <div className="user-badge role-admin">

@@ -40,7 +40,7 @@ const DonorDashboard = () => {
       <nav className="dashboard-nav">
         <div className="nav-brand">
           <Heart size={24} color="#ef4444" fill="#ef4444" />
-          <h2>AegisFlow <span className="gradient-text">Donor Portal</span></h2>
+          <h2>CrimsonNet <span className="gradient-text">Donor Portal</span></h2>
         </div>
         <div className="nav-user">
           <div className="user-badge role-donor">

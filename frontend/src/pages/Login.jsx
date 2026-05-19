@@ -67,10 +67,10 @@ const Login = () => {
     <div className="auth-container">
       <div className="glass-card">
         <h2 style={{ textAlign: 'center', marginBottom: '0.25rem' }}>
-          Welcome to <span className="gradient-text">AegisFlow</span>
+          Welcome to <span className="gradient-text">CrimsonNet</span>
         </h2>
         <p className="subtitle" style={{ textAlign: 'center' }}>
-          Log in with your credentials to access the forecasting system
+          Smart Blood Donation & Emergency Management System
         </p>
 
         {(formError || error) && (
