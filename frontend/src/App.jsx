@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Pages
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import DonorDashboard from './pages/dashboards/DonorDashboard';
@@ -17,6 +18,7 @@ function App() {
       <Router>
         <Routes>
           {/* Public Routes */}
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
@@ -55,7 +57,6 @@ function App() {
           />
 
           {/* Fallback routing */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>
