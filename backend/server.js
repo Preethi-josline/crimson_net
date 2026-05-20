@@ -30,16 +30,10 @@ app.use('/api/requests', requestRoutes);
 app.use('/api/stock', stockRoutes);
 app.use('/api/donors', donorRoutes);
 
-// Serve static assets in production
-if (process.env.NODE_ENV === 'production' || process.env.DEPLOYED === 'true') {
-  app.use(express.static(path.join(__dirname, '../frontend/dist')));
-  
-  app.get('*', (req, res) => {
-    if (!req.path.startsWith('/api/')) {
-      res.sendFile(path.resolve(__dirname, '../frontend', 'dist', 'index.html'));
-    }
-  });
-}
+// Simple API Root
+app.get("/", (req, res) => {
+  res.send("CrimsonNet Backend Running");
+});
 
 // Basic Route for testing connection
 app.get('/api/health', (req, res) => {
