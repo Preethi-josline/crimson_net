@@ -53,13 +53,13 @@ const BloodBankDashboard = () => {
     return `Standby (${56 - diffDays} days)`;
   };
 
-  const API_STOCK_URL = `${import.meta.env.VITE_API_URL || ''}/api/stock`;
-  const API_REQUESTS_URL = `${import.meta.env.VITE_API_URL || ''}/api/requests`;
-  const API_DONORS_URL = `${import.meta.env.VITE_API_URL || ''}/api/donors/search`;
+  const API_STOCK_URL = `${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/stock`;
+  const API_REQUESTS_URL = `${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/requests`;
+  const API_DONORS_URL = `${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/donors/search`;
 
   const fetchDonationLogs = async () => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/stock/donations`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/stock/donations`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -101,7 +101,7 @@ const BloodBankDashboard = () => {
           
           if (isInsufficient) {
             try {
-              const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/donors/search?bloodGroup=${encodeURIComponent(req.bloodGroup)}&location=${encodeURIComponent(req.location)}`, {
+              const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/donors/search?bloodGroup=${encodeURIComponent(req.bloodGroup)}&location=${encodeURIComponent(req.location)}`, {
                 headers: { Authorization: `Bearer ${token}` }
               });
               const dData = await res.json();
@@ -123,7 +123,7 @@ const BloodBankDashboard = () => {
 
       // 4. Fetch Low Stock Recovery
       const bankCity = user?.city || user?.location || 'Hyderabad';
-      const recoveryRes = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/stock/low-stock-recovery?city=${encodeURIComponent(bankCity)}`, {
+      const recoveryRes = await fetch(`${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/stock/low-stock-recovery?city=${encodeURIComponent(bankCity)}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const recoveryJson = await recoveryRes.json();
@@ -208,7 +208,7 @@ const BloodBankDashboard = () => {
     setError('');
     setSuccessMsg('');
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/stock/donate`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/stock/donate`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,

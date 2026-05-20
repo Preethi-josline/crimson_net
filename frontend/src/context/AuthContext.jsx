@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = `${import.meta.env.VITE_API_URL || ''}/api/auth`;
+  const API_URL = `${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/auth`;
 
   // Load user profile on mount or token change
   useEffect(() => {

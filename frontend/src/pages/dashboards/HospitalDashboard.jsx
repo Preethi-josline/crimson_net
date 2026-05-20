@@ -43,7 +43,7 @@ const HospitalDashboard = () => {
     emergencyLevel: 'medium',
   });
 
-  const API_URL = `${import.meta.env.VITE_API_URL || ''}/api/requests`;
+  const API_URL = `${import.meta.env.VITE_API_URL || 'https://crimsonnet-backend.onrender.com'}/api/requests`;
 
   // Sync hospital name from user profile
   useEffect(() => {
